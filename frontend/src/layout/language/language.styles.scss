@@ -1,0 +1,43 @@
+@import "./styles/base.styles.scss";
+
+div.language {
+    background-color: $white;
+    position: fixed;
+    left: 450px;
+    top: 56px;
+    padding: 20px;
+    z-index: 2;
+    transition: ease 0.4s;
+    border-radius: 0px 0px 10px 10px;
+
+    > ul li {
+        div {
+            cursor: pointer;
+            display: flex;
+            margin-bottom: 3px;
+            span {
+                @include p-font(0.75rem, $grey);
+                font-weight: 300;
+                padding-left: 7px;
+            }
+        }
+    }
+
+    &.hide-lang {
+        transform: translateY(-100%);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    div.language {
+        width: 100%;
+        right: 0px;
+        > ul li {
+            div {
+                span {
+                    @include p-font(1.1rem, $grey);
+                }
+            }
+        }
+    }
+}

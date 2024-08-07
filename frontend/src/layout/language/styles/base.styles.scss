@@ -1,0 +1,78 @@
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    border:0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    // list-style-type: none;
+    // width: 100vw;
+    // overflow-x: hidden;
+}
+
+// html { font-size: 20px; }
+// a, button { all: unset; }
+ul { list-style: none; }
+
+$white: #ffffff;
+$grey: #3F3E3E;
+$yellow: #F1EC40;
+$blue: #0187CA;
+$section-padding: 80px;
+
+@mixin title-font($size, $color) {
+    // font-family: Audiowide;
+    // font-style: normal;
+    // color: $color;
+}
+
+@mixin p-font($size, $color) {
+    // font-family: 'Poppins', sans-serif;
+    // color: $color;
+}
+
+
+
+
+
+@mixin renderContentTransition() {
+    // transition: ease 0.7s;
+}
+
+.invisible-left {
+    // @include renderContentTransition();
+    // transform: translateX(-7px);
+    // opacity: 0;
+}
+
+.visible-left {
+    // @include renderContentTransition();
+    // transform: translateX(0px);
+    // opacity: 1;
+}
+
+.invisible-right {
+    @include renderContentTransition();
+    // transform: translateX(7px);
+    // opacity: 0;
+}
+
+.visible-right {
+    // @include renderContentTransition();
+    // transform: translateX(0px);
+    // opacity: 1;
+}
+
+@media screen and (max-width: 350px) {
+    html {
+        // font-size: 5.5vw;
+    }
+    
+    #beta-badge {
+        // width: 30vw;
+    }
+}
